@@ -1,0 +1,15 @@
+{
+  "name": "@wesbos/code-icons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "download": "node download.js"
+  },
+  "author": "Wes Bos",
+  "license": "MIT",
+  "dependencies": {
+    "vscode-icons-js": "^11.6.1"
+  }
+}
