@@ -1,5 +1,9 @@
 // read all icons/*.svg files and convert to SVG strings
 import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function stringify() {
   // read all files in icons directory
