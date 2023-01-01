@@ -14,7 +14,7 @@ async function stringify() {
   const svgStrings = await Promise.all(svgs.map(async (file) => {
     return {
       name: file.replace('.svg', ''),
-      svg: await fs.readFile(`./icons/${
+      svg: await fs.readFile(`${__dirname}/icons/${
     file}`, 'utf8')
     }
   }));
