@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 
 async function stringify() {
   // read all files in icons directory
-  const files = await fs.readdir('./icons');
+  const files = await fs.readdir(`${__dirname}/icons`);
   // filter out non-svg files
   const svgs = files.filter((file) => file.endsWith('.svg'));
   // read all svg files
