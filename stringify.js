@@ -19,7 +19,7 @@ async function stringify() {
     }
   }));
 
-  console.log(svgStrings);
+  return svgStrings;
 }
 
 const iconsAsStrings = await stringify();
