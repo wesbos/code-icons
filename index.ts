@@ -1,4 +1,4 @@
-export * from 'vscode-icons-js';
+export { getIconForFile, getIconForFolder, getIconForOpenFolder } from 'vscode-icons-js';
 import { icons  } from './icons';
 
 export function getSVGStringFromFileType(name: string) {
