@@ -2,14 +2,24 @@
   "name": "@wesbos/code-icons",
   "version": "1.1.5",
   "description": "",
-  "main": "index.js",
   "type": "module",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs",
+    "types": "./dist/index.d.ts"
+  },
   "scripts": {
-    "download": "node download.js"
+    "download": "node download.js",
+    "stringify": "npx tsx stringify.js",
+    "fetch-icons": "npm run download && npm run stringify",
+    "build": "vite build"
   },
   "author": "Wes Bos",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^18.11.18",
+    "vite": "^4.0.4",
+    "vite-plugin-dts": "^1.7.1",
     "vscode-icons-js": "^11.6.1"
   }
 }

@@ -22,6 +22,10 @@ async function stringify() {
   return svgStrings;
 }
 
+// Save to json file
 const iconsAsStrings = await stringify();
+const json = JSON.stringify(iconsAsStrings, null, 2)
+await fs.writeFile(`${__dirname}/icons.ts`,
+  `export const icons = ${json}`
+);
 
-export { iconsAsStrings }
